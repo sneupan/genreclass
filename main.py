@@ -34,13 +34,10 @@ def trainingLogisticModel(X_train, X_test, y_train, y_test):
 
     # Create a logistic regression model
     log_reg = LogisticRegression(max_iter=1000, random_state=42)
-
     # Train the model
     log_reg.fit(X_train, y_train)
-
     # Predict on the test set
     y_pred = log_reg.predict(X_test)
-
     # Calculate the accuracy
     accuracy = accuracy_score(y_test, y_pred)
 
@@ -52,10 +49,8 @@ def trainingRandomForests(X_train, X_test, y_train, y_test):
 
     # Train the model on the training data
     random_forest.fit(X_train, y_train)
-
     # Predict on the test set
     y_pred_rf = random_forest.predict(X_test)
-
     # Calculate the accuracy
     accuracy_rf = accuracy_score(y_test, y_pred_rf)
 
